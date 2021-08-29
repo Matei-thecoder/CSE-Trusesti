@@ -1,31 +1,177 @@
 <html>
     <head>
         <title>CSE-Trusesti</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="p_1">
             <h1>Consiliul Scolar al Elevilor - Trusesti</h1>
+            <h2 class="h2_1">Noutati</h2>
+            <p id="p1">Aici vor aparea toate noutatile legate de consiliul elevilor.</p>
+            <ul>
+                <li><a href="" download>fsdfads</a></li>
+            </ul>
         </div>
+        <div id="p_2">
+            <h2>Membrii</h2>
+             <div id="membrii">
+                    <div>
+                        <img src="icon.png">
+                        <div>
+                            <p>Nume</p>
+                            <p>Presedinte</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="icon.png">
+                        <div>
+                            <p>Nume</p>
+                            <p>Vicepresedinte</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="icon.png">
+                                <div>
+                                    <p>Nume</p>
+                                <p>Vicepresedinte</p>
+                                </div></div>
+                    <div>
+                        <img src="icon.png">
+                        <div>
+                            <p>Nume</p>
+                            <p>Secretar</p>
+                        </div>
+                    </div>
+             </div>
+                
+            
+    
+        </div>
+       
     </body>
     <style>
         body{
+            font-family: 'Poppins', sans-serif;
+            background-color:#293443 ;
+            justify-content: center;
+            font-size:xx-large;
+        }
+        #p_1{
+            background-color:#293443 ;
+            padding-top: 2%;
+            padding-bottom: 4%;
+            margin:0;
+            width:100%;
+            height:40%;
+            color:#5db84d;
+            
+        }
+        h1{
+            
+            text-align:center;
+            justify-content: center;
+            animation:1s ease-out 0s 1 slideFromTop;
+        }
+        h2{
+            
+            padding-top:5%;
+            padding-left:5%;
+            padding-bottom: 3%;
+            text-transform: uppercase;
+            
+            text-decoration: underline;
+        }
+       
+        #p1{
+            padding-left:5%;
+            color:white;
+            animation:1s ease-out 0s 1 slideFromLeft;
+        }
+        ul{
+            margin-bottom: 5vh;
+            padding-bottom: 2%;
+            animation:1s ease-out 0s 1 slideFromLeft;
+        }
+
+        #p_2{
+            position:relative;
+            background-color:#FEA443 ;
+            color:white;
+        }
+       
+        img{
+            width:40%;
+            height:12%;
+            border-radius: 100%;
+        }
+        #membrii{
+            column-count: 2;
+            text-align: center;
+        }
+        @media only screen and (min-width:1000px) {
+            body{
+            font-family: 'Poppins', sans-serif;
             background-color:#293443 ;
             justify-content: center;
         }
         #p_1{
             background-color:#293443 ;
             padding-top: 2%;
+            padding-bottom: 4%;
             margin:0;
             width:100%;
             height:40%;
-            display:block;
+            color:#5db84d;
             
         }
         h1{
-            color:#5db84d;
+            
             text-align:center;
             justify-content: center;
             animation:1s ease-out 0s 1 slideFromTop;
+        }
+        h2{
+            
+            padding-top:5%;
+            padding-left:5%;
+            padding-bottom: 3%;
+            text-transform: uppercase;
+            
+            text-decoration: underline;
+        }
+       
+        #p1{
+            padding-left:5%;
+            color:white;
+            animation:1s ease-out 0s 1 slideFromLeft;
+        }
+        ul{
+            margin-bottom: 5vh;
+            padding-bottom: 2%;
+            animation:1s ease-out 0s 1 slideFromLeft;
+        }
+
+        #p_2{
+            position:relative;
+            background-color:#FEA443 ;
+            color:white;
+        }
+       
+        img{
+            width:40%;
+            height:20%;
+            border-radius: 100%;
+        }
+            #membrii{
+                column-count: 4;
+                
+                text-align: center;
+            }
         }
         @keyframes slideFromTop{
             0%{
@@ -33,6 +179,15 @@
             }
             100%{
                 transform:translateY(0%);
+            }
+        
+        }
+        @keyframes slideFromLeft{
+            0%{
+                transform:translateX(-100%);
+            }
+            100%{
+                transform:translateX(0%);
             }
         }
     </style>
