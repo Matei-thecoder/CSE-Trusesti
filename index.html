@@ -9,12 +9,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#p_1">Noutati</a>
+            <a href="#p_2">Membrii</a>
+            <a href="#p_3">Informatii Generale</a>
+            <a href="#contact">Contact</a>
+          </div>
         <div id="p_1">
+            <button class="openbtn" onclick="openNav()">&#9776; </button>
             <h1>Consiliul Scolar al Elevilor - Trusesti</h1>
-            <h2 class="h2_1">Noutati</h2>
-            <p id="p1">Aici vor aparea toate noutatile legate de consiliul elevilor.</p>
+            <h2 >Noutati</h2>
+            <p >Aici vor aparea toate noutatile legate de consiliul elevilor.</p>
             <ul>
                 <li><a href="" download>fsdfads</a></li>
+                <li></li>
             </ul>
         </div>
         <div id="p_2">
@@ -63,8 +72,10 @@
                         non proident,
                     sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
             </div>
+
+            
         </div>
-         <!-- Slideshow container -->
+        <!-- Slideshow container -->
 <div class="slideshow-container">
 
     <!-- Full-width images with number and caption text -->
@@ -117,11 +128,12 @@
         #p_1{
             background-color:#293443 ;
             padding-top: 2%;
-            padding-bottom: 4%;
+            padding-bottom: 50%;
             margin:0;
             width:100%;
             height:40%;
             color:#5db84d;
+            font-size:xx-large;
             
         }
         h1{
@@ -169,13 +181,13 @@
         #p_3{
                 color:white;
                 
-            }
-            @media(prefers-reduced-motion: no-preference){
+        }
+        @media(prefers-reduced-motion: no-preference){
             .i_g-animation{
                 animation:1s ease-out 0s 1 slideFromRight;
             }
         }
-         /* Slideshow container */
+        /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
@@ -284,6 +296,65 @@
     animation:1s ease-out 0s 1 slideFromRight;
     padding-right:5%;
 }
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 40px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 70px;
+  cursor: pointer;
+  background-color: #293443;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+        
         @media only screen and (min-width:1000px) {
             body{
             font-family: 'Poppins', sans-serif;
@@ -293,7 +364,7 @@
         #p_1{
             background-color:#293443 ;
             padding-top: 2%;
-            padding-bottom: 20%;
+            padding-bottom: 50%;
             margin:0;
             width:100%;
             height:40%;
@@ -347,7 +418,7 @@
                 color:white;
                 
             }
-            @media(prefers-reduced-motion: no-preference){
+        @media(prefers-reduced-motion: no-preference){
             .i_g-animation{
                 animation:1s ease-out 0s 1 slideFromRight;
             }
@@ -462,6 +533,61 @@
     animation:1s ease-out 0s 1 slideFromRight;
     padding-right:5%;
 }
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #293443;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+
+
+            
         }
         @keyframes slideFromTop{
             0%{
@@ -505,6 +631,7 @@
 });
 
 observer.observe(document.querySelector('.i_g-wrapper'));
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -533,5 +660,18 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+
     </script>
 </html>
