@@ -54,13 +54,15 @@
         </div>
         <div id="p_3">
             <h2>Informatii Generale</h2>
-            <p >"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                     non proident,
-                 sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <div class="i_g-wrapper">
+                <p class="i_g" id="ig">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                       cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident,
+                    sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
         </div>
     </body>
     <style>
@@ -126,6 +128,11 @@
                 color:white;
                 
             }
+            @media(prefers-reduced-motion: no-preference){
+            .i_g-animation{
+                animation:1s ease-out 0s 1 slideFromRight;
+            }
+        }
         @media only screen and (min-width:1000px) {
             body{
             font-family: 'Poppins', sans-serif;
@@ -189,6 +196,11 @@
                 color:white;
                 
             }
+            @media(prefers-reduced-motion: no-preference){
+            .i_g-animation{
+                animation:1s ease-out 0s 1 slideFromRight;
+            }
+        }
         }
         @keyframes slideFromTop{
             0%{
@@ -207,5 +219,30 @@
                 transform:translateX(0%);
             }
         }
+        @keyframes slideFromRight{
+            0%{
+                transform:translateX(200%);
+            }
+            100%{
+                transform:translateX(0%);
+            }
+        }
     </style>
+    <script>
+        const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const square = entry.target.querySelector('.i_g');
+
+    if (entry.isIntersecting) {
+      square.classList.add('i_g-animation');
+	  return; // if we added the class, exit the function
+    }
+
+    // We're not intersecting, so remove the class!
+    square.classList.remove('i_g-animation');
+  });
+});
+
+observer.observe(document.querySelector('.i_g-wrapper'));
+    </script>
 </html>
